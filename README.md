@@ -10,6 +10,7 @@ If you'd like, you can use [contact-list-api](https://github.com/wmerussi/contac
 
 ## Development server
 
+After downloading, run `npm install` to install all project dependencies. 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
@@ -21,6 +22,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ### TODO
-* Make service loader to inform that something is happening
+* Build service loader to inform something is loading
 * Apply frontend validation
 * Integrate TDD
