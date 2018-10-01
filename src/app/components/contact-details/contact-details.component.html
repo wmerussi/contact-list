@@ -1,6 +1,6 @@
 <div>
   <header class="contact-details__header">
-    <div class="contact-details__first-letter">{{ getFirstLetter(contact.name) }}</div>
+    <div class="contact-details__first-letter">{{ contact.firstLetter }}</div>
     <input class="contact-details__name" [(ngModel)]="contact.name" placeholder="Nome" type="text">
   </header>
 
@@ -8,9 +8,9 @@
     <li class="contact-details__list">
       <ui-section title="Telefones">
         <ul>
-          <li class="contact__data" *ngFor="let phone of contact.phones">
-            <input [(ngModel)]="phone.number" type="text">
-            <span class="data__delete button--icon button--danger" (click)="removePhone(phone.id)"></span>
+          <li class="contact__data" *ngFor="let phone of contact.phones; let i = index">
+            <input [ngModel]="phone" (change)="contact.phones[i] = $event" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removePhone(phone)"></span>
           </li>
 
           <li class="contact__data">
@@ -23,9 +23,9 @@
     <li class="contact-details__list">
       <ui-section title="E-mails">
         <ul class="contact-details__list">
-          <li class="contact__data" *ngFor="let email of contact.emails">
-            <input [(ngModel)]="email.address" type="text">
-            <span class="data__delete button--icon button--danger" (click)="removeEmail(email.id)"></span>
+          <li class="contact__data" *ngFor="let email of contact.emails; let i = index">
+            <input [ngModel]="email" (change)="contact.emails[i] = $event" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removeEmail(email)"></span>
           </li>
 
           <li class="contact__data">
@@ -38,9 +38,9 @@
     <li class="contact-details__list">
       <ui-section title="WhatsApp">
         <ul class="contact-details__list">
-          <li class="contact__data" *ngFor="let whatsapp of contact.whatsapp">
-            <input [(ngModel)]="whatsapp.number" type="text">
-            <span class="data__delete button--icon button--danger" (click)="removeWhatsapp(whatsapp.id)"></span>
+          <li class="contact__data" *ngFor="let whatsapp of contact.whatsapp; let i = index">
+            <input [ngModel]="whatsapp" (change)="contact.whatsapp[i] = $event" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removeWhatsapp(whatsapp)"></span>
           </li>
 
           <li class="contact__data">

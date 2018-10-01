@@ -9,7 +9,7 @@
     <button (click)="openDetails(contact.id)">
       <ui-thumb-description
         [description]="contact.name"
-        [thumb]="getFirstLetter(contact.name)"
+        [thumb]="contact.firstLetter"
       ></ui-thumb-description>
     </button>
   </li>

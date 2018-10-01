@@ -1,12 +1,16 @@
 <div class="app">
   <div class="app__contacts">
     <app-contact-list
+      [newContact]="newContact"
       (onNewContact)="addNewContact()"
       (onOpenDetails)="openDetails($event)"
     ></app-contact-list>
   </div>
 
   <div class="app__contact-details">
-    <app-contact-details [contactId]="contactIdDetails"></app-contact-details>
+    <app-contact-details
+      [contactId]="contactIdDetails"
+      (onAdd)="addContact($event)"
+    ></app-contact-details>
   </div>
 </div>
