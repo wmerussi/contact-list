@@ -35,12 +35,6 @@ $ui: (
   08: additional-color(08), // Light Danger
   09: additional-color(09), // Pale Danger
   10: support-color(08),    // Dark light
-  //01: transparent,          // Transparent background color
-  //03: support-color(08),    // Darker
-  //04: support-color(04),    // Black
-  //05: support-color(06),    // Light
-  //08: additional-color(05), // Light Info
-  //09: additional-color(06), // Pale Info
 ) !default;
 
 /// Text palette colors
@@ -57,14 +51,6 @@ $text: (
   04: additional-color(01), // Success
   05: additional-color(07), // Warning
   06: additional-color(10), // Danger
-  //01: support-color(02), // Default text
-  //02: support-color(03), // Secondary importance text
-  //03: brand-color(01),   // Text highlight
-  //04: additional-color(01), // Alert
-  //05: support-color(06), // Light text
-  //06: support-color(07), // Dark text
-  //07: support-color(06), // Links
-  //09: additional-color(04), // Info
 ) !default;
 
 /// Field palette colors
@@ -74,10 +60,6 @@ $text: (
 /// --- input, select, etc...
 ///
 $field: (
-  //01: support-color(01), // Neutral background
-  //02: brand-color(01),   // Heavy highlight
-  //03: support-color(05), // Light highlight
-  //04: support-color(08), // Dark light
 ) !default;
 
 /// Support palette colors
@@ -89,7 +71,6 @@ $field: (
 /// - Secondary state of button background
 ///
 $support: (
-  //01: additional-color(01), // Alert
 ) !default;
 
 /// Social palette colors
@@ -98,8 +79,6 @@ $support: (
 /// - Social colors
 ///
 $social: (
-  //facebook: social-color(facebook),
-  //gmail: social-color(gmail),
 ) !default;
 
 /// Palette picker

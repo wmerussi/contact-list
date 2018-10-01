@@ -4,28 +4,12 @@
 /// Base colors
 /// Design colors to use throughout the project
 /// It must be only imported on './palettes.scss' file
-
-/// Base colors
-///
-/// Ionic has a default $color variable, so we need to create another variable
-/// or it will try to find the color on the default variable.
 ///
 $base-colors: (
   beige: #FAEBCC,
-  //black: (
-  //  base:  #444,
-  //  light: #999,
-  //  pure : #000,
-  //),
   blue: (
     base: #22A7F0,
-  //  light: #BCE8F1,
-  //  pale:  #D9EDF7,
   ),
-  //brands: (
-  //  facebook: #3B5998,
-  //  gmail:    #FF4343,
-  //),
   brown: #8A6D3B,
   green: (
     base:  #3C763D,
@@ -37,7 +21,6 @@ $base-colors: (
     dark:  #878787,
     light: #CBCBCB,
   ),
-  //ice:    #CFE4FF,
   orange: #FFA500,
   pink:  (
     light: #F2DEDE,
@@ -46,7 +29,6 @@ $base-colors: (
   red: (
     pale: #A94442,
   ),
-  //white:  #FFFFFF,
   yellow: #F6F7AA,
 ) !default;
 
@@ -75,11 +57,6 @@ $support-colors: (
   01: hsla-color(color(grey, base)),
   02: hsla-color(color(green, pale)),
   03: hsla-color(color(grey, dark)),
-  //03: hsla-color(color(black, light)),
-  //04: hsla-color(color(black, pure))z,
-  //05: hsla-color(color(ice)),
-  //06: hsla-color(color(white)),
-  //08: hsla-color(color(grey, light)),
 
 ) !default;
 
@@ -101,9 +78,6 @@ $additional-colors: (
   07: hsla-color(color(red, pale)),
   08: hsla-color(color(pink, light)),
   09: hsla-color(color(pink, pale)),
-  //04: hsla-color(color(blue, base)),
-  //05: hsla-color(color(blue, light)),
-  //06: hsla-color(color(blue, pale)),
 ) !default;
 
 /// Get color from $additional-colors map
@@ -115,8 +89,6 @@ $additional-colors: (
 /// Social colors
 ///
 $social-colors: (
-  //facebook: hsla-color(color(brands, facebook)),
-  //gmail: hsla-color(color(brands, gmail)),
 ) !default;
 
 /// Get color from $additional-colors map
