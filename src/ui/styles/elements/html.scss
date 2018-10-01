@@ -1,7 +1,9 @@
+@import "../tokens/font/font-config";
 @import "../tokens/font/base-font-size";
 
 /// Used to set font-size to $base-font-size
 ///
 html {
+  @extend %font--roboto;
   font-size: $base-font-size;
 }

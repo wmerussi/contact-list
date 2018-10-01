@@ -2,6 +2,7 @@
   <div class="app__contacts">
     <app-contact-list
       [newContact]="newContact"
+      [removedContact]="removedContact"
       (onNewContact)="addNewContact()"
       (onOpenDetails)="openDetails($event)"
     ></app-contact-list>
@@ -11,6 +12,7 @@
     <app-contact-details
       [contactId]="contactIdDetails"
       (onAdd)="addContact($event)"
+      (onDelete)="deleteContact($event)"
     ></app-contact-details>
   </div>
 </div>

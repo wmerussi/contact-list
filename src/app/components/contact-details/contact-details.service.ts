@@ -21,6 +21,10 @@ export class ContactDetailsService {
     return this.http.post(`${ url }/contacts`, JSON.stringify(contact), httpOptions);
   }
 
+  public delete(id: number): Observable<any> {
+    return this.http.delete(`${ url }/contact/${ id }`, httpOptions);
+  }
+
   public get(id: number): Observable<any> {
     return this.http.get(`${ url }/contact/${ id }`, httpOptions);
   }

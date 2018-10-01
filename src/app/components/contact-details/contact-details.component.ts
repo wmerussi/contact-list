@@ -16,6 +16,7 @@ import _ from 'lodash';
 })
 export class ContactDetailsComponent {
   @Output() public onAdd: EventEmitter<Contact> = new EventEmitter<Contact>();
+  @Output() public onDelete: EventEmitter<number> = new EventEmitter<number>();
 
   public contact: Contact = new Contact();
 
@@ -47,6 +48,13 @@ export class ContactDetailsComponent {
   public addWhatsapp(number: string) {
     this.contact.whatsapp.push(number);
     this.newWhatsapp = '';
+  }
+
+  delete() {
+    this.service.delete(this.contact.id).subscribe(() => {
+      this.onDelete.emit(this.contact.id);
+      this.contact = new Contact();
+    });
   }
 
   public removePhone(number: number) {

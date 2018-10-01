@@ -10,7 +10,6 @@ button {
   @extend %border-radius--base;
 
   padding: space(xsmall, base);
-  border: 1px solid palette(ui, 01);
 
   &--danger {
     background-color: palette(ui, 09);
@@ -29,6 +28,7 @@ button {
 
   &--success {
     background-color: palette(ui, 05);
+    border: 1px solid palette(ui, 01);
   }
 
   &--warning {
