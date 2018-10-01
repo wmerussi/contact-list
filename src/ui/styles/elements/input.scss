@@ -1,0 +1,10 @@
+@import "../colors/palettes";
+
+input {
+  border: {
+    top: 0;
+    right: 0;
+    bottom: 1px solid palette(ui, 01);
+    left: 0;
+  };
+}

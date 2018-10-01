@@ -1,0 +1,37 @@
+@import "../tools/functions/rem";
+@import "../tokens/-tokens";
+@import "../colors/palettes";
+
+button {
+  border: 0;
+}
+
+.button {
+  @extend %border-radius--base;
+
+  padding: space(xsmall, base);
+  border: 1px solid palette(ui, 01);
+
+  &--danger {
+    background-color: palette(ui, 09);
+  }
+
+  &--icon {
+    @extend %border-radius--circle;
+    @extend %font-size--small;
+
+    display: inline-block;
+    padding: space(xsmall);
+
+    width: rem(24px);
+    height: rem(24px);
+  }
+
+  &--success {
+    background-color: palette(ui, 05);
+  }
+
+  &--warning {
+    background-color: palette(ui, 07);
+  }
+}
