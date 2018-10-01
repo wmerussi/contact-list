@@ -1,0 +1,20 @@
+@import "../ui/styles/tokens/-tokens";
+
+.app {
+  display: flex;
+
+  &__contacts,
+  &__contact-details {
+    padding: space(base);
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  &__contacts {
+    flex-basis: 300px;
+  }
+
+  &__contact-details {
+    flex: 1;
+  }
+}

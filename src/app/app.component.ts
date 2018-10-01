@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'contact-list';
+  public contactIdDetails: number;
+
+  public addNewContact() {
+    this.contactIdDetails = 0;
+  }
+
+  public openDetails(id: number) {
+    this.contactIdDetails = id;
+  }
 }
