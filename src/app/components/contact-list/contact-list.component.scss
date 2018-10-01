@@ -1,0 +1,48 @@
+@import "../../../ui/styles/tools/mixins/position";
+@import "../../../ui/styles/tools/functions/rem";
+@import "../../../ui/styles/colors/palettes";
+@import "../../../ui/styles/tokens/-tokens";
+
+.contact-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item  {
+    display: flex;
+    align-items: center;
+    padding: space(xsmall) 0;
+  }
+
+  &__list {
+    margin-top: space(base);
+  }
+
+  &__title {
+    @extend %font--bold;
+  }
+}
+
+.button--icon {
+  position: relative;
+
+  &:before,
+  &:after {
+    @include position(both);
+
+    background-color: palette(ui, 03);
+    content: "";
+  }
+
+  &:before {
+    width: 12px;
+    height: 2px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 12px;
+  }
+}

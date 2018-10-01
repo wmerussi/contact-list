@@ -1,0 +1,16 @@
+<header class="contact-list__header">
+  <h2 class="contact-list__title">Contatos</h2>
+
+  <button class="button--icon button--success" (click)="addNewContact()"></button>
+</header>
+
+<ul class="contact-list__list">
+  <li class="contact-list__item" *ngFor="let contact of contactList">
+    <button (click)="openDetails(contact.id)">
+      <ui-thumb-description
+        [description]="contact.name"
+        [thumb]="getFirstLetter(contact.name)"
+      ></ui-thumb-description>
+    </button>
+  </li>
+</ul>
