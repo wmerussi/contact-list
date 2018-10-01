@@ -1,0 +1,57 @@
+<div>
+  <header class="contact-details__header">
+    <div class="contact-details__first-letter">{{ getFirstLetter(contact.name) }}</div>
+    <input class="contact-details__name" [(ngModel)]="contact.name" placeholder="Nome" type="text">
+  </header>
+
+  <ul class="contact-details__info">
+    <li class="contact-details__list">
+      <ui-section title="Telefones">
+        <ul>
+          <li class="contact__data" *ngFor="let phone of contact.phones">
+            <input [(ngModel)]="phone.number" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removePhone(phone.id)"></span>
+          </li>
+
+          <li class="contact__data">
+            <input [(ngModel)]="newPhone" (change)="addPhone($event.target.value)" placeholder="Novo telefone" type="text">
+          </li>
+        </ul>
+      </ui-section>
+    </li>
+
+    <li class="contact-details__list">
+      <ui-section title="E-mails">
+        <ul class="contact-details__list">
+          <li class="contact__data" *ngFor="let email of contact.emails">
+            <input [(ngModel)]="email.address" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removeEmail(email.id)"></span>
+          </li>
+
+          <li class="contact__data">
+            <input [(ngModel)]="newEmail" (change)="addEmail($event.target.value)" placeholder="Novo e-mail" type="text">
+          </li>
+        </ul>
+      </ui-section>
+    </li>
+
+    <li class="contact-details__list">
+      <ui-section title="WhatsApp">
+        <ul class="contact-details__list">
+          <li class="contact__data" *ngFor="let whatsapp of contact.whatsapp">
+            <input [(ngModel)]="whatsapp.number" type="text">
+            <span class="data__delete button--icon button--danger" (click)="removeWhatsapp(whatsapp.id)"></span>
+          </li>
+
+          <li class="contact__data">
+            <input [(ngModel)]="newWhatsapp" (change)="addWhatsapp($event.target.value)" placeholder="Novo whatsapp" type="text">
+          </li>
+        </ul>
+      </ui-section>
+    </li>
+  </ul>
+
+  <div class="button-container">
+    <button class="button button--success" (click)="save()" type="button">Salvar</button>
+  </div>
+</div>

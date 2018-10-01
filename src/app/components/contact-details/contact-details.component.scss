@@ -1,0 +1,78 @@
+@import "../../../ui/styles/tools/mixins/position";
+@import "../../../ui/styles/colors/palettes";
+@import "../../../ui/styles/tokens/-tokens";
+
+.contact-details {
+  &__header {
+    text-align: center;
+
+    + .contact-details__info {
+      margin-top: space(base);
+    }
+  }
+
+  &__first-letter {
+    @extend %border-radius--circle;
+    @extend %font-size--huge;
+
+    margin: 0 auto;
+    padding: space(xsmall);
+    width: 70px;
+    height: 70px;
+
+    text-align: center;
+    background-color: palette(ui, 01);
+  }
+
+  &__list {
+    + .contact-details__list {
+      margin-top: space(base);
+    }
+  }
+
+  &__name {
+    @extend %font-size--huge;
+
+    margin-top: space(base);
+    color: palette(text, 02);
+    text-align: center;
+  }
+}
+
+.contact__data {
+  display: flex;
+  align-items: center;
+
+  +.contact__data {
+    margin-top: space(small);
+  }
+}
+
+.data__delete {
+  position: relative;
+  margin-left: space(small);
+  transform: rotate(45deg);
+
+  &:before,
+  &:after {
+    @include position(both);
+
+    background-color: palette(ui, 03);
+    content: "";
+  }
+
+  &:before {
+    width: 12px;
+    height: 2px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 12px;
+  }
+}
+
+.button-container {
+  margin-top: space(base);
+  text-align: right;
+}
