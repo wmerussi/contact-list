@@ -1,0 +1,14 @@
+@import "../../styles/colors/palettes";
+@import "../../styles/tokens/-tokens";
+
+.section {
+  &__title {
+    @extend %font-size--medium;
+
+    color: palette(text, 03);
+  }
+
+  &__content {
+    margin-top: space(xsmall);
+  }
+}
